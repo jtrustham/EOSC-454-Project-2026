@@ -182,4 +182,11 @@ dependencies:
   - zipp=3.23.0=pyhcf101f3_1
   - zlib-ng=2.3.3=hed4e4f5_1
   - zstd=1.5.7=hbf9d68e_6
+  - pip:
+      - discretize==0.12.0
+      - geoana==0.8.1
+      - libdlf==0.3.0
+      - pymatsolver==0.4.0
+      - scipy==1.17.1
+      - simpeg==0.25.2
 prefix: /Users/jackson/miniconda3/envs/EOSC454-Project
