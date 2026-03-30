@@ -10,6 +10,7 @@ conda (Anaconda or miniconda)
 1. Clone the repository
 
 git clone https://github.com/jtrustham/EOSC-454-Project-2026.git
+
 cd EOSC-454-Project-2026
 
 2. Create the new environment
