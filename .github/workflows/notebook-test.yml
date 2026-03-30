@@ -26,4 +26,4 @@ jobs:
       shell: bash -l {0}
       run: |
         conda run -n EOSC454-Project-Jtrustham \
-          jupyter nbconvert --execute --to notebook *.ipynb
+          jupyter nbconvert --execute --to notebook notebooks/*.ipynb
