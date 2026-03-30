@@ -5,9 +5,10 @@ This repository contains the data and code for my course project for EOSC 454 at
 # Installation instructions
 
 Pre-Requisties:
-- conda (Anaconda or miniconda)
+conda (Anaconda or miniconda)
 
 1. Clone the repository
+
 git clone https://github.com/jtrustham/EOSC-454-Project-2026.git
 cd EOSC-454-Project-2026
 
