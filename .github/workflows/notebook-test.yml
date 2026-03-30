@@ -1,0 +1,33 @@
+name: Notebook Execution Test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  run-notebooks:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Get repo code
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    # 2. Set up conda from environment.yml
+    - name: Set up Miniconda
+      uses: conda-incubator/setup-miniconda@v3
+      with:
+        environment-file: environment.yml
+        auto-activate-base: false
+        activate-environment: EOSC454-Project-Jtrustham
+
+    # 3. Install Jupyter (sometimes not included in env.yml)
+    - name: Install Jupyter
+      run: |
+        conda install -y jupyter nbconvert
+
+    # 4. Run all notebooks
+    - name: Execute notebooks
+      shell: bash -l {0}
+      run: |
+        jupyter nbconvert --execute --to notebook *.ipynb
