@@ -21,8 +21,9 @@ jobs:
         auto-activate-base: false
         activate-environment: EOSC454-Project-Jtrustham
 
-        - name: Execute notebooks
-        shell: bash -l {0}
-        run: |
-          conda run -n EOSC454-Project-Jtrustham \
-            jupyter nbconvert --execute --to notebook *.ipynb
+    # 3. Execute notebooks
+    - name: Execute notebooks
+      shell: bash -l {0}
+      run: |
+        conda run -n EOSC454-Project-Jtrustham \
+          jupyter nbconvert --execute --to notebook *.ipynb
