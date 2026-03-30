@@ -10,6 +10,5 @@ dependencies:
   - wheel
   - conda-content-trust
   - conda-libmamba-solver
-  - python.app
   - pandoc
 prefix: /Users/jackson/miniconda3
