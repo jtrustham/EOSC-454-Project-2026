@@ -19,4 +19,18 @@ conda env create -f environment.yml
 
 conda activate EOSC454-Project-Jtrustham
 
+# Usage
 
+1. Launch Jupyter (or any equivalent platform to run a .ipynb file)
+
+2. Open Synthetic_Problem.ipynb
+
+Run all cells top to bottom. 
+This is the forward and inverse problems for synthetic data.
+
+# Project Structure
+
+- `data/` – input datasets
+- `notebooks/` – analysis notebooks
+- `src/` – core code (functions to import)
+- `environment.yml` – dependencies
