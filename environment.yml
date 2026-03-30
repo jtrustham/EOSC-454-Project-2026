@@ -11,4 +11,6 @@ dependencies:
   - conda-content-trust
   - conda-libmamba-solver
   - pandoc
+  - jupyter
+  - nbconvert
 prefix: /Users/jackson/miniconda3

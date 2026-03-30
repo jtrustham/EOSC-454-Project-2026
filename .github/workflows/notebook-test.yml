@@ -30,4 +30,5 @@ jobs:
     - name: Execute notebooks
       shell: bash -l {0}
       run: |
+      conda activate EOSC454-Project-Jtrustham
         jupyter nbconvert --execute --to notebook *.ipynb
