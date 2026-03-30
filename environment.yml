@@ -1,4 +1,4 @@
-name: EOSC454-Project
+name: EOSC454-Project-Jtrustham
 channels:
   - conda-forge
   - defaults
