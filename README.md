@@ -36,3 +36,13 @@ This is the forward and inverse problems for synthetic data.
 - `notebooks/` – analysis notebooks
 - `src/` – core code (functions to import)
 - `environment.yml` – dependencies
+
+## Tests
+
+This repository uses GitHub Actions to automatically test the notebooks.
+
+On every push and pull request, the following checks run:
+- Environment creation from `environment.yml`
+- Execution of all Jupyter notebooks using `nbconvert`
+
+If the build passes, all notebooks run successfully in a clean environment.
