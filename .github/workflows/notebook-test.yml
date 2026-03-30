@@ -21,14 +21,8 @@ jobs:
         auto-activate-base: false
         activate-environment: EOSC454-Project-Jtrustham
 
-    # 3. Install Jupyter (sometimes not included in env.yml)
-    - name: Install Jupyter
-      run: |
-        conda install -y jupyter nbconvert
-
-    # 4. Run all notebooks
-    - name: Execute notebooks
-      shell: bash -l {0}
-      run: |
-        conda activate EOSC454-Project-Jtrustham
-        jupyter nbconvert --execute --to notebook *.ipynb
+        - name: Execute notebooks
+        shell: bash -l {0}
+        run: |
+          conda run -n EOSC454-Project-Jtrustham \
+            jupyter nbconvert --execute --to notebook *.ipynb
