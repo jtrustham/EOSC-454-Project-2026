@@ -1,0 +1,19 @@
+name: EOSC454-Project-Win
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  - jupyterlab
+  - ipykernel
+  - nbconvert
+  - simpeg=0.25.2
+  - discretize=0.12.0
+  - geoana=0.8.1
+  - pymatsolver=0.4.0
+  - pip
+  - choclo
