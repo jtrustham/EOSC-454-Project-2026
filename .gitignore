@@ -211,3 +211,12 @@ data/processed/
 *.ipynb_checkpoints
 __pycache__/
 .env
+
+# outputs
+outputs/
+*.npy
+*.npz
+
+# python junk
+__pycache__/
+*.pyc
