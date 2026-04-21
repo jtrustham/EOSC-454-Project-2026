@@ -19,6 +19,23 @@ def save_cache(name, **arrays):
     np.savez(filepath, **arrays)
     print(f"[saved] {filepath}")
 
+def save_figure(name, fig=None, dpi=300, ext="png"):
+    ensure_dirs()
+    
+    # create figures directory
+    fig_dir = OUT_DIR / "figures"
+    fig_dir.mkdir(parents=True, exist_ok=True)
+
+    filepath = fig_dir / f"{name}.{ext}"
+
+    # use current figure if none provided
+    if fig is None:
+        import matplotlib.pyplot as plt
+        fig = plt.gcf()
+
+    fig.savefig(filepath, dpi=dpi, bbox_inches="tight")
+    print(f"[saved] {filepath}")
+
 def load_cache(name):
     filepath = OUT_DIR / "cache" / f"{name}.npz"
     return np.load(filepath)

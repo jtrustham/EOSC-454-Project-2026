@@ -64,6 +64,8 @@ components = ["tmi"]
 receiver_list = magnetics.receivers.Point(receiver_locations, components=components) #List of receivers from locations
 receiver_list = [receiver_list]
 
+########################################################################################################
+#Define Survey
 # Define the inducing field
 inclination = 75  # inclination [deg]
 declination = 25.73  # declination [deg]
@@ -86,9 +88,6 @@ nx, ny, nz = mesh_data["nx"], mesh_data["ny"], mesh_data["nz"]
 dx, dy, dz = mesh_data["dx"], mesh_data["dy"], mesh_data["dz"]
 x0, y0, z0 = mesh_data["x0"], mesh_data["y0"], mesh_data["z0"]
 
-# x_mesh = [(dx, nx)] #No padding, active cells and ref model mismatch...
-# y_mesh = [(dy, ny)]
-# z_mesh = [(dz, nz)]
 
 x_mesh = [(dx, 5, -1.3), (dx, nx), (dx, 5, 1.3)] 
 y_mesh = [(dy, 5, -1.3), (dy, ny), (dy, 5, 1.3)]
@@ -104,13 +103,6 @@ tensor_mesh.origin = np.r_[
     z0 - np.sum(hz),
 ]
 
-#Unpadded shift
-# # Shift origin so that nodes match the UBC mesh definition
-# tensor_mesh.origin = np.r_[
-#     x0,              # nodes_x[0] = x0
-#     y0,              # nodes_y[0] = y0
-#     z0 - nz * dz,    # nodes_z[0] = z0 - nz*dz, nodes_z[-1] ≈ z0
-# ]
 ########################################################################################################
 # Define active cells and mapping
 
