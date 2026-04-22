@@ -212,10 +212,10 @@ data/processed/
 __pycache__/
 .env
 
-# outputs
-outputs/
-*.npy
-*.npz
+# # outputs
+# outputs/
+# *.npy
+# *.npz
 
 # python junk
 __pycache__/
