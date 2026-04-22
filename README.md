@@ -30,10 +30,21 @@ conda activate EOSC454-Project-Jtrustham
 Run all cells top to bottom. 
 This is the forward and inverse problems for synthetic data.
 
+3. Open Upward_continuation.ipynb
+
+This notebook follows basic setup of survey, topography, tensor mesh and forward simulation. All of which remains the same in the full inversion workflow (visualizations included in Mt_Milligan_Inversion.ipynb). Finnally, the equivalent source upward continuation is implemented.
+
+4. Open Mt_Milligan_Inversion.ipynb
+
+Run all cells top to bottom. Full inversion and results.
+
+** Note: All models have been cached, and inversions in Mt_Milligan_Inversion.ipynb have been commented out because of long run times. If desired, uncomment the inversion cells and comment out the cell that loads the cached models.
+
 ## Project Structure
 
 - `data/` – input datasets
 - `notebooks/` – analysis notebooks
+- `outputs/` - Models, figures, and pre-computed arrays for reproducibility
 - `src/` – core code (functions to import)
 - `environment.yml` – dependencies
 
