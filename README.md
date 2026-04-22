@@ -1,10 +1,13 @@
 # EOSC-454-Project-2026
 
-This repository contains the data and code for my course project for EOSC 454 at the University of British Columbia. The aim of the project is to set up a forward and inverse workflow to recover a 3d susceptibility model, from total magnetic field measurements. Secondly, we attempt to use our workflow to invert the data obtained at Mt.milligan and recover a susecptibility model obtained in Oldenburg et. al.’s ‘Inversion of geophysical data over a copper gold porphyry deposit: A case history for Mt. Milligan’.
+This project develops a forward and inverse workflow to recover a 3D susceptibility model from total magnetic field data.
+The workflow is first validated on synthetic data, and then applied to field data from the Mt. Milligan copper-gold porphyry system. The results are compared with an accepted model from a separate study.
+
+Magnetic inversion is a key tool in mineral exploration to obtain resource estimates and deposit structures. However, obtaining reliable models is challenging due to the fundamental non-uniqueness of the inverse problem. This project demonstrates a workflow that inverts real field data using modern techniques.
 
 ## Installation instructions
 
-Pre-Requisties:
+Prerequisties:
 conda (Anaconda or miniconda)
 
 1. Clone the repository
@@ -23,22 +26,21 @@ conda activate EOSC454-Project-Jtrustham
 
 ## Usage
 
-1. Launch Jupyter (or any equivalent platform to run a .ipynb file)
+Launch Jupyter (or any equivalent platform to run a .ipynb file)
 
-2. Open Synthetic_Problem.ipynb
+#### Synthetic_Problem.ipynb
 
-Run all cells top to bottom. 
 This is the forward and inverse problems for synthetic data.
 
-3. Open Upward_continuation.ipynb
+#### Upward_continuation.ipynb
 
-This notebook follows basic setup of survey, topography, tensor mesh and forward simulation. All of which remains the same in the full inversion workflow (visualizations included in Mt_Milligan_Inversion.ipynb). Finnally, the equivalent source upward continuation is implemented.
+This notebook follows basic setup of survey, topography, tensor mesh and forward simulation. All of which remains the same in the full inversion workflow (visualizations included in Mt_Milligan_Inversion.ipynb). Finally, the equivalent source upward continuation is implemented.
 
-4. Open Mt_Milligan_Inversion.ipynb
+#### Mt_Milligan_Inversion.ipynb
 
-Run all cells top to bottom. Full inversion and results.
+This notebook contains the full inversion and results of the field (upward continued) data.
 
-** Note: All models have been cached, and inversions in Mt_Milligan_Inversion.ipynb have been commented out because of long run times. If desired, uncomment the inversion cells and comment out the cell that loads the cached models.
+-> Note: All models have been cached, and inversions in Mt_Milligan_Inversion.ipynb have been commented out because of long run times. If desired, uncomment the inversion cells and comment out the cell that loads the cached models.
 
 ## Project Structure
 
